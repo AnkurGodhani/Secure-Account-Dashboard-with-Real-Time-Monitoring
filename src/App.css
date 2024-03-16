@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background_color{
+  background: rgb(55,55,121);
+  background: radial-gradient(circle, rgba(55,55,121,0.9473039215686274) 51%, rgba(252,70,113,0.8604691876750701) 64%);
+  
+}
+
+.bg-image{
+    display: flex;
+    background: url("./image/ok.jpg");
+    background-size: cover;
+    opacity:0.7;
+    min-height:100vh;
+    object-fit: cover;
+    overflow: hidden;
+    /* filter: blur(0.8px); */
+}   
+
+.bg-image1{
+  background: url("./image/bg.jpg");
+  background-size: cover;
+  /* opacity:0.5; */
+  min-height:94.5vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.background{
+  display: flex;
+   background:url("./image/images/front-image.jpg");
+   background-size: cover;
+   object-fit: cover;
+   width: 100%;
+}
+
+
+.bike{
+  background:url("./image/bg2");
+   height: 91.8vh;
+   background-size: cover;
+   object-fit: cover;
+   width: 100%;
+}
+.About{
+  background:url("./image/About\ us\ image");
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+.ads{
+  background:url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/bike-for-sale-ads-design-template-8949422c5699c7635401e35f29aff96e_screen.jpg?ts=1657692241");
+  background-size: auto;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 60px;
+    height: 50px;
+    --m:no-repeat linear-gradient(90deg,#000 70%,#0000 0);
+    -webkit-mask: 
+      var(--m) calc(0*100%/4) 100%/calc(100%/5) calc(1*100%/5),
+      var(--m) calc(1*100%/4) 100%/calc(100%/5) calc(2*100%/5),
+      var(--m) calc(2*100%/4) 100%/calc(100%/5) calc(3*100%/5),
+      var(--m) calc(3*100%/4) 100%/calc(100%/5) calc(4*100%/5),
+      var(--m) calc(4*100%/4) 100%/calc(100%/5) calc(5*100%/5);
+    background: linear-gradient(#514b82 0 0) left/0% 100% no-repeat #ddd;
+    animation: l14 2s infinite steps(6);
+  }
+  @keyframes l14 {
+    100% {background-size: 120% 100%}
+  }
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* shdow propertices in grid method  */
+.shadows{
+  -webkit-box-shadow: 14px 0px 35px -5px rgba(179,189,194,0.62);
+  -moz-box-shadow: 14px 0px 35px -5px rgba(179,189,194,0.62);
+  box-shadow: 14px 0px 35px -5px rgba(179,189,194,0.62);
+}
+
+.box-shadow{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}  
+
+.box-shadow1{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 
+
+.shodow-2{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+
+ /* Reset-Passworld ne css che  */
+.button-56 {
+  align-items: center;
+  background-color: #431cc5;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+
+/* Signup button css */
+.button-9 {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-9:disabled {
+  cursor: default;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.bg-gari{
+    background-color: #eb7d4e;
+}
+
+.button1 {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: rgb(193, 163, 98);
+  border: 2px solid rgb(193, 163, 98);
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(193, 163, 98);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button1:hover::before {
+  scale: 3;
+}
+
+.button1:hover {
+  color: #212121;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+}
+
+.button1:active {
+  scale: 1;
+}
+
+.Porfile-shadow{
+  box-shadow: 21px -29px 66px 27px rgba(117,127,140,0.39);
+}
+
