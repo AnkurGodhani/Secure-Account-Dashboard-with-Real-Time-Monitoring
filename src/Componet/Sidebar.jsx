@@ -5,6 +5,7 @@ import { ImProfile } from "react-icons/im";
 import { MdAppSettingsAlt } from "react-icons/md";
 import { IoLogOutOutline } from "react-icons/io5";
 import { FaRegCreditCard } from "react-icons/fa";
+import { MdOutlineBrowserUpdated } from "react-icons/md";
 import { IoStorefrontSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { Logout } from '../services/opreation/authAPI';
@@ -49,6 +50,7 @@ const Sidebar = () => {
                             
                             <strong className={`${matchRouter("/dashbord/Admin/cratestore") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><IoStorefrontSharp/><Link to="Admin/cratestore">Crate Store</Link></strong>
                             
+                            <strong className={`${matchRouter("/dashbord/Notifications") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><MdOutlineBrowserUpdated/><Link to="/dashbord/Notifications">push Update</Link></strong>
                         </div>
                         )
                     }

@@ -7,7 +7,9 @@ export const endpoint = {
     SENDOTP_API : BASE_URL + "/sendotp",
     CHANGE_PASSWORD_API : BASE_URL + "/ChagePassword",
     RESET_PASSWORD_API : BASE_URL + "/reset-Passworld",
-    FORGETPASSWORD_API : BASE_URL + "/resetPasswordsendOTP"
+    FORGETPASSWORD_API : BASE_URL + "/resetPasswordsendOTP",
+    UPDATE_WEBSIT_INFO : BASE_URL + "/push/admin/notification",
+    SHOW_NOTIFICATIONS: BASE_URL + "/notification"
 }   
 
 export const AccountDeleting = {

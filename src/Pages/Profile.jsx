@@ -12,7 +12,7 @@ const Profile = () => {
   return (
    <div className='w-full'>
        <span className=' relative top-6 left-10 text-green-900 font-semibold text-lg'>Home {">"} dashbord {">"} <span className='text-blue-800 font-bold'>Profile</span></span>
-    <div className='flex flex-col mt-10'>
+    <div className='flex flex-col justify-center items-center mt-24'>
 
 <div className='flex items-center justify-center text-center mx-auto Porfile-shadow p-5 w-[520px] rounded-md'>
     <div className='flex justify-between items-center w-full gap-x-5 p-2'>

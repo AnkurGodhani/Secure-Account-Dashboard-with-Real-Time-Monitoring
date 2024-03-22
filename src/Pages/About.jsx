@@ -15,7 +15,7 @@ import { Autoplay,Pagination } from 'swiper/modules';
 
 const About = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col -mt-1 scroll-smooth'>
         <div className='About h-[200px] flex flex-col justify-center items-center font-bold gap-y-2 mb-10'>
             <h1 className='text-3xl text-white font-mono'>About Us</h1>
             <p className='font-mono'>Home {"> "}<span className='text-yellow-400'>About</span></p>

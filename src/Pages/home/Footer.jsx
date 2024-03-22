@@ -8,6 +8,7 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { IoArrowForwardCircleSharp } from "react-icons/io5";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -20,7 +21,7 @@ const Footer = () => {
             <div className='flex flex-col mb-10 mt-10'>
                 <h1 className='font-bold mb-5'>ABOUT US</h1>
                 <div className='flex flex-col gap-3'>
-                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/>About Us</span>
+                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/>< Link to="/about">About Us</Link></span>
                     <span className='flex items-center gap-x-1' ><MdOutlineDoubleArrow/>FAQs</span>
                     <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/> <a href='#'>Privacy</a></span>
                     <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/>Terms of use</span>

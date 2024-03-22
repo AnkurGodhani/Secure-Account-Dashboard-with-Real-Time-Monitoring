@@ -175,3 +175,45 @@ export function Contactus(data){
        toast.dismiss(toastId)
     }
 }
+
+export function UpadateInfo(data,token){
+    return async() =>{
+        const toastId = toast.loading("Loading...")
+       try {
+            const Responce = await apiConnector("POST",endpoint.UPDATE_WEBSIT_INFO,data,{
+                 Authorization:`Bearer ${token}`
+            });
+            console.log("Responce Aaviyo che....",Responce);
+
+            if(!Responce.data.sucess){
+                throw new Error(Responce.data.message)
+            }
+            toast.success("SucessFully Sent.")
+       } catch (error) {
+            console.log("UPADTE_APP NOTIFICATION API ERROR.....",error);
+            toast.error("Not Upadteing user Message.")
+       }
+       toast.dismiss(toastId)
+    }
+}
+
+export const Notifications = async(token) =>{
+    let result = [];
+    try {
+        const response = await apiConnector("POST",endpoint.SHOW_NOTIFICATIONS,null,{
+            Authorization:`Bearer ${token}`
+        })
+
+        console.log("Responce aaya...",response)
+
+        if(!response.data.success){
+            throw new Error(response.data.message)
+        }
+
+        result = response?.data?.data
+        console.log("result",result)
+    } catch (error) {
+        console.log("UPADTE_APP NOT SHOW NOTIFICATION API ERROR.....",error);
+    }
+    return result;
+}

@@ -43,7 +43,6 @@ const MyBookingBike = () => {
                                 <span className='font-bold'>Liesunce-No :{bike.Liesunce}</span>
                                 <button className='flex justify-between w-full text-start'>
                                     <span>
-                                        <Link to="/TrackingBikeMap">Tracking Bike Store</Link>
                                     </span>
                                     <span className='flex items-center text-center p-2 rounded-md bg-black font-bold text-yellow-950 gap-x-2 mx-2'>
                                         

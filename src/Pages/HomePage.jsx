@@ -54,7 +54,7 @@ const HomePage = () => {
                      <span className='w-[45%] font-bold'>We have more than a thousand bikes for you to choose.</span>
                      <button className='flex items-center gap-x-3 bg-green-700 text-xl font-bold p-2 rounded-md mt-3'>
                         {
-                           token === null ? (<Link to="/login"><span className='flex items-center gap-x-2'>Read more <IoArrowForwardCircleSharp/></span></Link>):(<Link to="/dashbord/getstoreDetail"><span className='flex items-center gap-x-2'>Buy Now<IoArrowForwardCircleSharp/></span></Link>)
+                           token === null ? (<Link to="/login"><span className='flex items-center gap-x-2'>Read more <IoArrowForwardCircleSharp/></span></Link>):(<Link to="/dashbord/getstoreDetail"><span className='flex items-center gap-x-2'>Rent Now<IoArrowForwardCircleSharp/></span></Link>)
                         }
                           
                      </button>

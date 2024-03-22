@@ -3,7 +3,7 @@ const express = require('express')
 
 const router = express.Router();
 
-const { singup,login,sendotp,changePassword,resetPassword,resetPasswordsendOTP} = require('../controller/Auth')
+const { singup,login,sendotp,changePassword,resetPassword,resetPasswordsendOTP,userNotification,getNotifications} = require('../controller/Auth')
 const {ProfileUpdate,deleteProfile} = require('../controller/Profile')
 const {StoreDetil, getAllDetail, deleteStore,bikeDetails,EngineDetail,getDetailStore,} = require('../controller/storeDetil')
 const {auth, isAdmin,isCustomer} = require('../middleware/auth')
@@ -19,7 +19,8 @@ router.delete("/deleteAccount",auth,deleteProfile)
 // TODO : THE API TESTING IS PENDDING....
 router.put("/reset-Passworld",resetPassword)
 router.post("/resetPasswordsendOTP",resetPasswordsendOTP)
-
+router.post("/push/admin/notification",auth,isAdmin,userNotification)
+router.post("/notification",auth,isCustomer,getNotifications)
 router.put("/ProfileUpdate",auth,ProfileUpdate)
 
 router.post("/craetestore",auth,isAdmin,StoreDetil)

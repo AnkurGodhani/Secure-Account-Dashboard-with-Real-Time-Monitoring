@@ -5,6 +5,8 @@ const otpGenerator = require('otp-generator')
 const OTP = require('../models/OTP')
 const mailSender = require('../utils/mailSender')
 const Profile = require('../models/Profile')
+const Notification = require('../models/Notification')
+const { MdTurnedIn } = require('react-icons/md')
 require('dotenv').config()
 
 exports.singup = async (req,res) =>{
@@ -117,6 +119,7 @@ exports.login = async (req,res) =>{
 
          user.token = token
          user.password = undefined
+         user.cpassword = undefined
 
         const options ={
            expires: new Date(Date.now() + 3 * 60 * 60 * 1000),
@@ -352,6 +355,58 @@ exports.resetPassword = async (req,res) =>{
         res.status(500).json({
             sucess:false,
             message:"Passworld Is Not Change Becomes Internal Error"
+        })
+    }
+}
+
+exports.userNotification = async(req,res) =>{
+    try {
+        const {title,time,description} = req.body
+
+        if(!title || !time || !description){
+            return res.status(400).json({
+                success:false,
+                message:"All Filed are Requied."
+            })
+        }
+
+        const Info=await Notification.create({title,time,description});
+
+        res.status(200).json({
+            success:true,
+            message:"SucessFully Sending Notification",
+            notifiacation:Info
+        })
+        
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({
+            success:false,
+            message:"not Sending Notification."
+        })
+    }
+}
+
+exports.getNotifications = async(req,res) =>{
+    try {
+        const Notifications = await Notification.find({},{title:true,description:true,Date:true,time:true})
+        if(!Notifications){
+            return res.status(400).json({
+                success:false,
+                message:"Not Droup Your Message"
+            })
+        }
+
+        res.status(200).json({
+            success:true,
+            message:"Getting a Notifications.",
+            data:Notifications
+        })
+    } catch (error) {
+        console.log("NOTIFICATION SERVER ERROR...",error)
+        res.status(500).json({
+            success:false,
+            message:"Get all Notifiacation Not Allow."
         })
     }
 }

@@ -23,15 +23,15 @@ import { useSelector } from 'react-redux';
 import Contact from './Pages/ContactPage/Contact';
 import Sidebar from './Componet/Sidebar';
 import ResetPasswordVerifiyEmail from './Pages/storeBar/ResetPasswordVerifiyEmail';
-import Googlemaps from './Pages/GoogleMap/Googlemaps';
 import Bike from './Pages/home/Bike_Secetion/Bike';
 import New from './Pages/home/Bike_Secetion/New';
+import AddNotification from './Pages/dashbord/Admin/PushNoti/AddNotification';
 
 
 function App() {
   const {user} = useSelector((state)=>state.profile)
   return (
-    <div>
+    <div className='xscroll-smooth'>
         <Navbar/>
         <Routes>
             <Route path='/' element={<HomePage/>} />
@@ -44,7 +44,6 @@ function App() {
             <Route path='Contact-us' element={<Contact/>} />
             <Route path='/dashbord/getstoreDetail' element={<CarSecetion/>} />
             <Route path='/addtocart' element={<Cart/>} />
-            <Route path='/TrackingBikeMap' element={<Googlemaps/>} />
             <Route path='/dashbord/getstore/MasterDetail/:StoreId' element={<Master/>} />
             {
                 user?.accountType ==="Customer" ?  <Route path='/dashbord' element={<Sidebar/>} >
@@ -55,6 +54,7 @@ function App() {
                   <Route path='myprofile' element={<Profile/>} />
                   <Route path='BookingBike' element={<AdminBooking/>} />
                   <Route path='Admin/cratestore' element={<CreateStore/>} />
+                  <Route path='Notifications' element={<AddNotification/>} />
                   <Route path='Admin/cratestore/BikeInformation/:StoreId' element={<CreateBikeDetail/>} />
                   <Route path='Admin/cratestore/BikeInformation/Engine/:BikeId' element={<CrateEngineData/>} />
                   <Route path='setting' element={<Setting/>}/>

@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import ProfileDropdwon from '../profile/ProfileDropdwon'
 import { BsCartCheckFill } from "react-icons/bs";
+import { FaRegBell } from "react-icons/fa";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import mainlogo from "../../image/WhatsApp Image 2024-02-18 at 21.33.21_aa56f8e6.jpg"
-import AdsModels from '../../conformationModels/AdsModels'
+import UserShowNotie from '../dashbord/Admin/PushNoti/UserShowNotie'
 // import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -96,6 +97,16 @@ const Navbar = () => {
                         )
                     }
                </button>
+               {token !==null && (
+                   user.accountType === "Customer" && (
+                    <div className=' relative flex items-center text-xl group'>
+                         <FaRegBell />
+                         <div className=' invisible group-hover:visible transition-all duration-200 ease-out'>
+                            <UserShowNotie/>
+                         </div>
+                     </div>
+                   )
+               )}
                {token !==null && (
                    user.accountType === "Customer" && (
                     <div className=' relative flex items-center text-xl'>

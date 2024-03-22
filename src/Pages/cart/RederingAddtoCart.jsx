@@ -34,7 +34,7 @@ const RederingAddtoCart = () => {
                         </div>
                         <div className='flex  items-center justify-center w-full border border-green-600 text-yellow-50 font-bold  bg-green-700 rounded-md hover:bg-green-800 transition-all p-2 duration-200 cursor-pointer'>
                         <button type="button">
-                                <span className='flex items-center gap-x-2'><AiFillShopping/> <Link to={`/dashbord/getstore/MasterDetail/${store._id}`}>Buy Now</Link><IoIosArrowRoundForward/> </span>
+                                <span className='flex items-center gap-x-2'><AiFillShopping/> <Link to={`/dashbord/getstore/MasterDetail/${store._id}`}>Rent Now</Link><IoIosArrowRoundForward/> </span>
                             </button>
                         </div>
                     </div>

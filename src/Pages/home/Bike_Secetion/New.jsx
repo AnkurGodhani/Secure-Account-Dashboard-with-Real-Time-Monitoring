@@ -23,7 +23,7 @@ const New = () => {
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
                             <Link to={`${token ? "" : "/login"}`}>
 
-                            Buy Now
+                            Rent Now
                             </Link>
                         </button>
                     </div>
@@ -40,7 +40,7 @@ const New = () => {
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
                             <Link to={`${token ? "" : "/login"}`}>
 
-                            Buy Now
+                            Rent Now
                             </Link>
                         </button>
                     </div>
@@ -56,7 +56,7 @@ const New = () => {
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
                             <Link to={`${token ? "" : "/login"}`}>
-                            Buy Now
+                            Rent Now
                             </Link>
                         </button>
                     </div>
@@ -78,7 +78,7 @@ const New = () => {
                             </div>
                             <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
                                 <Link to={`${token ? "" : "/login"}`}>
-                                Buy Now
+                                Rent Now
                                 </Link>
                             </button>
                         </div>
