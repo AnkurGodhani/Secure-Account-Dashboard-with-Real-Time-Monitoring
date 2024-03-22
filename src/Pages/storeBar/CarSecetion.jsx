@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import {  useDispatch, useSelector } from 'react-redux'
 import { DeletingStore, getAllStoreDetil } from '../../services/opreation/storeAPI'
-import { LuBadgeDollarSign } from "react-icons/lu";
-import { MdDelete } from "react-icons/md";
 import { FaCartArrowDown } from "react-icons/fa";
 import { addTocart } from '../../Silces/cartSlices';
 import {Link} from 'react-router-dom'
@@ -11,7 +9,6 @@ import { setLoading } from '../../Silces/authSlices';
 import { TbCoinRupeeFilled } from "react-icons/tb";
 const CarSecetion = () => {
     const {loading,token} = useSelector((state)=>state.auth)
-    const {user} = useSelector((state)=> state.profile)
     const [stores,setstores] = useState([])
     const dispatch = useDispatch();
     
@@ -27,15 +24,13 @@ const CarSecetion = () => {
         fectchStore();
     },[])
 
-
-    //Delete Store valu start thay che bahio....
-    const handleDelete =async (storeId) =>{
-         dispatch(DeletingStore({storeId:storeId},token))
-         const result = await getAllStoreDetil(token)
-         if(result){
-              setstores(result)
-         }
-    }
+    // const handleDelete =async (storeId) =>{
+    //      dispatch(DeletingStore({storeId:storeId},token))
+    //      const result = await getAllStoreDetil(token)
+    //      if(result){
+    //           setstores(result)
+    //      }
+    // }
  
   return (
     <div>
@@ -65,25 +60,14 @@ const CarSecetion = () => {
                                         <span className='font-bold text-red-500'>{store.BrandName}</span>
                                    </div>
                                    <div className='flex justify-center items-center mt-5 mb-2'>
-                                       {
-                                           
-                                        user?.accountType === "Admin" ? (
-                                              <button className='flex items-center gap-x-2 bg-gray-700 border border-gray-800 text-yellow-300 p-2 rounded-md font-bold' onClick = {!loading ? ()=>handleDelete(store._id):()=>{}}>
-                                                <MdDelete/>Delete   
-                                              </button>
-                                           ) : (
-                                               <button className='flex items-center gap-x-2 bg-gray-700 border border-gray-800 text-yellow-300 p-2 rounded-md font-bold' onClick = {!loading ? ()=>dispatch(addTocart((store))):()=>{}}> 
+                                        <button className='flex items-center gap-x-2 bg-gray-700 border border-gray-800 text-yellow-300 p-2 rounded-md font-bold' onClick = {!loading ? ()=>dispatch(addTocart((store))):()=>{}}> 
                                                 <FaCartArrowDown/> Add TO Cart
                                                </button>
-                                           )
-                                       }
                                    </div>
                               </div>
                            ))  
                         }
-                    </div>
-                
-                
+                    </div>            
             </>) : 
             (<div>
                   <span>items is Not Found </span>

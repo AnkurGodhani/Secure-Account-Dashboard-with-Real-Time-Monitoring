@@ -31,43 +31,18 @@ const Navbar = () => {
              </div>
              <div>
                 <nav>
-                    <ul className='flex gap-x-5'>
+                    <ul className='flex gap-x-3'>
                 {
                     navLinks.map((titles,index)=>(
                         <li key={index} >
-                            {
-                                titles.title === "My Booking" ? (
-                                     <div className={`relative group flex gap-x-5 `}>
-                                        {
-                                            user?.accountType === "Customer" ? ( <Link to="/myBookingbike">  <span className={`flex items-center gap-x-1 hover:text-yellow-500 ${mathroute("/myBookingbike")? "text-yellow-500" : ""}`}>
-                                            My Booking </span></Link>) : token !== null &&  (
-                                                <Link to="/dashbord/Admin/cratestore">
-                                                    <span className={`flex items-center gap-x-1 hover:text-yellow-500 ${mathroute("/dashbord/Admin/cratestore")? "text-yellow-500" : ""}`}>
-                                                        Create Store
-                                                    </span>
-                                                </Link>
-                                            ) 
-                                        }
-                                    {
-                                        <div>
-                                            {
-                                                user?.accountType === "Admin" && (
-                                                    <Link to="/Admin/SuperPower/Booking">
-                                                        <span className={`hover:text-yellow-500 ${mathroute("/Admin/SuperPower/Booking")? "text-yellow-500" : ""}`}>Booking Time</span>
-                                                    </Link>
-                                                )
-                                            }
-                                        </div>
-                                    }
-                                     </div>
-                                ) : (
                                   <div className={`hover:text-yellow-500 ${mathroute(titles.link)? "text-yellow-500" : ""}`}>
-                                    <Link to={titles.link}>
-                                        <span>{titles.title}</span>
-                                    </Link>
+                                    {
+                                        <Link to={titles.link} className={`${token === null || user?.accountType === "Admin" ? titles.title === "Bikes" && "hidden":""}`}>
+                                             <span className={`${token === null || user?.accountType === "Admin" && titles.title === "Bikes" && "hidden"}`}>{titles.title}</span>
+                                        </Link>
+                                    }
+                                   
                                   </div>
-                                )
-                            }
                         </li>
                     ))
                 }

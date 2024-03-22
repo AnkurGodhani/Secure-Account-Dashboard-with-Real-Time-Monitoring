@@ -34,7 +34,7 @@ const CreateBikeDetail = () => {
     <div className=' flex items-center justify-center flex-col'>
         <p className='flex w-15 h-15 items-center flex-col rounded-full bg-yellow-500 text-white justify-center text-sm p-3 font-bold mt-5'>Step <span>2</span></p>
         <div className='text-4xl mt-5 font-bold font-serif'>Craete Bike Information</div>
-        <form onSubmit={handleSubmit(onSubmits)} className='  flex flex-col items-start justify-start mt-10  '>
+        <form onSubmit={handleSubmit(onSubmits)} className='  flex flex-col items-start justify-start mt-3'>
             <label className='flex flex-col w-full '>
                 <span className='font-bold text-md'>Ground_Clearance <sup className='text-red-800'>*</sup></span>
                 <input type="text" placeholder='the Ground_Clearance' id='Ground_Clearance' {...register("Ground_Clearance",{required:true})} 
@@ -81,10 +81,12 @@ const CreateBikeDetail = () => {
                     )
                 }
             </label>
-            <div className='flex gap-x-5'>
-                 <NavLink to={`/dashbord/Admin/cratestore/BikeInformation/Engine/:StoreId`}>
+            <div className='flex gap-x-8'>
+                 <button type="button" className='flex items-center justify-center gap-x-1 mt-5 py-2 px-3 font-bold rounded-md hover:border-2 border-blue-400 transition-all duration-200 ease-out'>
+                 <NavLink to={`/dashbord/Admin/cratestore/BikeInformation/Engine/:StoreId`} className={`flex gap-x-3 items-center`}>
                     <IoIosArrowBack/> Back
                  </NavLink>
+                 </button>
                 <button type="submit" className='flex items-center justify-center gap-x-1 mt-5 py-2 px-3 text-yellow-50 font-bold rounded-md border border-yellow-600 bg-yellow-700 hover:bg-yellow-800 transition-all duration-200' >
                     Next <MdNavigateNext size={20}/>
                 </button>

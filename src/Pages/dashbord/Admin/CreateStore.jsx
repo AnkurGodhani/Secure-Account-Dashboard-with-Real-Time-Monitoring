@@ -53,15 +53,16 @@ const CreateStore = () => {
 
       }
   return (
-    <div>
-        <form onSubmit={handleSubmit(onsumbit)} >
-        <div className={`flex flex-col gap-y-8 gap-x-2 ${isDragActive ? "bg-richblack-600" : "bg-richblack-700"}`} >
-            <label htmlFor="BikeName">
-                <span>BikeName</span>
+    <div className='flex justify-center items-center'>
+        <form onSubmit={handleSubmit(onsumbit)} className='flex flex-col justify-center items-center shadow-md border p-8 mt-10 shadow-blue-300'>
+        <div className={`flex flex-col gap-y-3 gap-x-2 ${isDragActive ? "bg-richblack-600" : "bg-richblack-700"}`} >
+            <label htmlFor="BikeName" className='flex flex-col'>
+                <span className='mx-1.5 text-lg font-semibold'>BikeName <span className='text-red-500'>*</span></span>
                 <input type="text" 
                 id='BikeName'
                 placeholder='Enter The BikeName'
                 {...register("BikeName",{required:true})}
+                className='w-[350px] border-2 border-gray-500 outline-none p-1.5 rounded-md'
                 />
                 {
                     errors.BikeName && (
@@ -69,12 +70,13 @@ const CreateStore = () => {
                     )
                 }
             </label>
-            <label htmlFor="description">
-                <span>description <sup>*</sup></span>
+            <label htmlFor="description" className='flex flex-col'>
+                <span className='mx-1.5 text-lg font-semibold'>description <sup className='text-red-500'>*</sup></span>
                 <textarea type="text"
                   id='description'
                   placeholder='Enter Your description'
                   {...register("description",{required:true})}
+                  className='w-[350px] border-2 border-gray-500 outline-none p-1.5 rounded-md'
                 />
                 {
                     errors.description && (
@@ -82,12 +84,13 @@ const CreateStore = () => {
                     )
                 }
             </label>
-            <label htmlFor="price">
-                <span>price <sup>*</sup></span>
+            <label htmlFor="price" className='flex flex-col'>
+                <span className='mx-1.5 text-lg font-semibold'>price <sup className='text-red-500'>*</sup></span>
                 <input type="Number"
                   id='price'
                   placeholder='Enter Your Bike Price'
                   {...register("price",{required:true})}
+                  className='w-[350px] border-2 border-gray-500 outline-none p-1.5 rounded-md'
                 />
                 {
                     errors.price && (
@@ -95,12 +98,13 @@ const CreateStore = () => {
                     )
                 }
             </label>
-            <label htmlFor="BrandName">
-                <span>BrandName <sup>*</sup></span>
+            <label htmlFor="BrandName" className='flex flex-col'>
+                <span className='mx-1.5 text-lg font-semibold'>BrandName <sup className='text-red-500'>*</sup></span>
                 <input type="text"
                  id='BrandName'
                  placeholder='Enter Your Bike BrandName'
                  {...register("BrandName",{required:true})}
+                 className='w-[350px] border-2 border-gray-500 outline-none p-1.5 rounded-md'
                 />
                 {
                     errors.BrandName && (
@@ -108,11 +112,11 @@ const CreateStore = () => {
                     )
                 }
             </label>
-            <div {...getRootProps()}>
+            <div {...getRootProps()} className='flex flex-col'>
                 <input {...getInputProps()} ref={inputRef} id='thambilnPhoto'
                 //   {...register("thambilnPhoto",{required:true})}
                 />
-                <div>
+                <div className='mx-1.5 text-lg font-semibold border-2 uppercase select-none cursor-pointer p-2 rounded-lg w-fit'>
                     Uplading Your Files
                 </div>
             </div>
@@ -121,8 +125,8 @@ const CreateStore = () => {
                 <span>thambilnPhoto Is Requied.</span>
               )   
             }
-            <button type="submit">
-                Next <MdNavigateNext/>
+            <button type="submit" className='flex items-center justify-center mx-auto gap-x-3 text-center w-fit py-2 px-3 rounded-md  text-white bg-gray-700 hover:bg-gray-800 transition-all duration-150 ease-in '>
+                Next <MdNavigateNext size={20}/>
             </button>
             </div>
         </form>

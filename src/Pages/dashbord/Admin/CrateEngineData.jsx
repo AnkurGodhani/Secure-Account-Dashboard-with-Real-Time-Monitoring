@@ -33,12 +33,12 @@ const CrateEngineData = () => {
   return (
     <div className=' flex items-center justify-center flex-col'>
         <p className='flex w-15 h-15 items-center flex-col rounded-full bg-yellow-500 text-white justify-center text-sm p-3 font-bold mt-5'>Step <span>3</span></p>
-        <div className='text-4xl mt-5 font-bold font-serif'>Craete Bike Information</div>
-        <form onSubmit={handleSubmit(onSubmits)} className='flex flex-col items-start justify-start mt-10  '>
+        <div className='text-4xl mt-5 font-bold font-serif'>Craete Engine Information</div>
+        <form onSubmit={handleSubmit(onSubmits)} className='flex flex-col items-start justify-start mt-10 gap-y-2'>
             <label className='flex flex-col w-full '>
                     <span className='font-bold text-md'>MaxPower<sup className='text-red-800'>*</sup></span>
                     <input type="text" placeholder='the MaxPower' id='MaxPower' {...register("MaxPower",{required:true})} 
-                        className='border-2 border-gray-600 rounded-md w-full px-3 mt-1 bg-gray-900 text-yellow-300 font-bold p-[5px]'
+                        className='border-2 border-gray-600 rounded-md w-[340px] px-3 mt-1 bg-gray-900 text-yellow-300 font-bold p-[5px]'
                     />
                     {
                         errors.MaxPower && (
@@ -79,7 +79,7 @@ const CrateEngineData = () => {
                         )
                     }
                 </label>
-                <button type="submit" className='flex items-center justify-center gap-x-1 mt-5 py-2 px-3 text-yellow-50 font-bold rounded-md border border-yellow-600 bg-yellow-700 hover:bg-yellow-800 transition-all duration-200' >
+                <button type="submit" className='flex items-center justify-center gap-x-1 mx-auto mt-5 py-2 px-3 text-yellow-50 font-bold rounded-md border border-yellow-600 bg-yellow-700 hover:bg-yellow-800 transition-all duration-200' >
                     Save <MdNavigateNext size={20}/>
                 </button>
         </form>

@@ -35,8 +35,8 @@ export const getAllStoreDetil = async(token) =>{
 
 export function cratestore(data,token,navigate){
     return async(dispatch) =>{
+        const toastId = toast.loading("Colleting Information")
         dispatch(setLoading(true))
-        
         try {
             
             const responce = await apiConnector("POST",storeEndpoint.CREATE_STORE_ADMIN,data,
@@ -53,7 +53,7 @@ export function cratestore(data,token,navigate){
                 throw new Error(responce.data.message)
             }
 
-            toast.success("Create-Store SucessFully")
+            toast.success("Colleting Information SucessFully")
             console.log(responce.data.data.Store.slice(-1)[0])
             navigate(`/dashbord/Admin/cratestore/BikeInformation/${responce.data.data.Store.slice(-1)[0]}`)
 
@@ -62,6 +62,7 @@ export function cratestore(data,token,navigate){
             toast.error("Not Crating Store")
         }
         dispatch(setLoading(false))
+        toast.dismiss(toastId)
     }
 }
 
@@ -91,7 +92,7 @@ export function DeletingStore(storeId,token){
 
 export function CreateBikeInformation(data,token,navigate){
     return async(dispatch) =>{
-        const toastId = toast.loading("Loading..")
+        const toastId = toast.loading("Bike-Information Colleting..")
         dispatch(setLoading(true))
         
          try {
@@ -107,7 +108,7 @@ export function CreateBikeInformation(data,token,navigate){
                 throw new Error(responce.data.message)
             }
 
-            toast.success("Creating Bike SucessFully")
+            toast.success("Bike-Information Colleting SucessFully")
             navigate(`/dashbord/Admin/cratestore/BikeInformation/Engine/${responce.data.data.MoreDetils.slice(-1)[0]._id}`)
             
          } catch (error) {
@@ -122,7 +123,7 @@ export function CreateBikeInformation(data,token,navigate){
 
 export function CrateEngineOfBike(data,token,navigate){
     return async(dispatch) =>{
-        const toastId = toast.loading("Loading..")
+        const toastId = toast.loading("Creating Store..")
         dispatch(setLoading(true))
         try {
             const responce = await apiConnector("POST",storeEndpoint.CREATE_ENGINE_BIKE_API,data,{
