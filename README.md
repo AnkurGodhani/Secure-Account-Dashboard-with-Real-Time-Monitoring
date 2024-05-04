@@ -1,3 +1,30 @@
+#Run The Project
+npm run dev
+
+# Admin side
+email : ankurgodhani218@gmail.com
+password : Admin123
+
+server of .env
+PORT = 8000
+MOONGOOSE_URL ="mongodb+srv://ankurgodhani07:ankut@ankit.1kjj9as.mongodb.net/try"
+JWT_SECRET="10"
+
+MAIL_HOST=smtp.gmail.com
+MAIL_USER=ankurgodhani07@gmail.com
+MAIL_PASS=ooyyzbzbrnfgfytj
+
+CLOUD_NAME= 
+CLOUD_API_KEY=
+CLOUD_API_SECRET=
+
+FOLDER_NAME=BOOKING
+
+.env (outer Folder)
+
+REACT_APP_BASE_URL= http://localhost:8000/api/v1
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
