@@ -1,4 +1,4 @@
-import React ,{useEffect, useState} from 'react'
+import React  from 'react'
 import { LuMailOpen } from "react-icons/lu";
 import { VscCallOutgoing } from "react-icons/vsc";
 import { FaFacebookF } from "react-icons/fa";
@@ -15,9 +15,9 @@ import Bike from './home/Bike_Secetion/Bike';
 const HomePage = () => {
 
   const {token} = useSelector((state)=>state.auth)
+  const {user} = useSelector((state)=>state.profile)
 
-  // Running a Ads Models 
-    // const [Activeads,setActiveads] = useState(true)
+
 
   return (
       <div className='relative -mt-1'>
@@ -40,11 +40,10 @@ const HomePage = () => {
                             </div>  
                     </div>
                     <div className='flex flex-row gap-x-5 items-end justify-center'>
-                        <div><a href="#"><FaFacebookF size={24} className='hover:text-blue-500'/></a></div>
-                        <div><a href="#"><RiTwitterXLine size={24} className='hover:text-black'/></a></div>
-                        <div><a href="#"><FaLinkedinIn size={24} className='hover:text-blue-800'/></a></div>
-                        <div><a href="#"><FaGooglePlusG size={24} className='hover:text-gray-500'/></a></div>
-                        <div><a href="#"><FaInstagram size={24} className='hover:text-red-500' /></a></div>
+                        <div><a href="https://www.facebook.com/ankur.godhani.330?mibextid=ZbWKwL"><FaFacebookF size={24} className='hover:text-blue-500'/></a></div>
+                        <div><a href="https://twitter.com/KodavalaNi55766?t=QQ0tT6XER8jbxHy9g1WKXA&s=08"><RiTwitterXLine size={24} className='hover:text-black'/></a></div>
+                        <div><a href="https://www.linkedin.com/in/ankur-godhani-743386267/"><FaLinkedinIn size={24} className='hover:text-blue-800'/></a></div>
+                        <div><a href="https://www.instagram.com/meets_ahir_21?igsh=MzRlODBiNWFlZA=="><FaInstagram size={24} className='hover:text-red-500' /></a></div>
                     </div>
               </div>
                </div>
@@ -54,7 +53,7 @@ const HomePage = () => {
                      <span className='w-[45%] font-bold'>We have more than a thousand bikes for you to choose.</span>
                      <button className='flex items-center gap-x-3 bg-green-700 text-xl font-bold p-2 rounded-md mt-3'>
                         {
-                           token === null ? (<Link to="/login"><span className='flex items-center gap-x-2'>Read more <IoArrowForwardCircleSharp/></span></Link>):(<Link to="/dashbord/getstoreDetail"><span className='flex items-center gap-x-2'>Rent Now<IoArrowForwardCircleSharp/></span></Link>)
+                           token === null ? (<Link to="/login"><span className='flex items-center gap-x-2'>Read more <IoArrowForwardCircleSharp/></span></Link>):  user?.accountType === "Customer" ? (<Link to="/dashbord/getstoreDetail"><span className='flex items-center gap-x-2'>Rent Now<IoArrowForwardCircleSharp/></span></Link>) : (<Link to="/dashbord/Admin/Bike/Information"><span className='flex items-center gap-x-2'>BIKE INFORMATION<IoArrowForwardCircleSharp/></span></Link>)
                         }
                           
                      </button>

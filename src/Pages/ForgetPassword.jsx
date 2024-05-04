@@ -48,13 +48,9 @@ const ForgetPassword = () => {
                     <input type="email" value={email} placeholder='Enter Your Email' name='email' onChange={handleonChange} required className='  px-2 py-1 rounded-md  text-black border border-red-500 w-[260px]' />
                 </label>
                 <label>
-                    <p className=' font-serif font-bold'>Password <sup className='text-red-500'>*</sup></p>
+                    <p className=' font-serif font-bold'>New Password<sup className='text-red-500'>*</sup></p>
                     <input type="password" name="password" value={password} placeholder='Enter Your new Password' onChange={handleonChange} className='rounded-md px-2 py-1 text-black border border-red-500 w-[260px]' />
                 </label>
-                {/* <div>
-                    <input type="checkbox"/>
-                    <p>Hiii</p>
-                </div> */}
                 <button type="submit" className='mb-10 button-56 mt-3' role="button">
                     Reset
                 </button>

@@ -75,12 +75,17 @@ const CreateStore = () => {
                 <textarea type="text"
                   id='description'
                   placeholder='Enter Your description'
-                  {...register("description",{required:true})}
+                  {...register("description",{required:true,minLength:150})}
                   className='w-[350px] border-2 border-gray-500 outline-none p-1.5 rounded-md'
                 />
                 {
                     errors.description && (
                         <span>description is Requied</span>
+                    )
+                }
+                {
+                     errors.description < 150 && (
+                        <span>description minmumn 150 word is Requied</span>
                     )
                 }
             </label>

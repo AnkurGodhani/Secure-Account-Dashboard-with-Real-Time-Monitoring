@@ -8,7 +8,7 @@ import { FaRegBell } from "react-icons/fa";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import mainlogo from "../../image/WhatsApp Image 2024-02-18 at 21.33.21_aa56f8e6.jpg"
 import UserShowNotie from '../dashbord/Admin/PushNoti/UserShowNotie'
-// import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
     const {token} = useSelector((state) => state.auth)
@@ -50,7 +50,6 @@ const Navbar = () => {
                 </nav>
                 
             </div>
-            {/* buttton propertices lavani che bhaio */}
             <div className='flex gap-x-5'>
                <button >
                     {

@@ -26,6 +26,11 @@ import ResetPasswordVerifiyEmail from './Pages/storeBar/ResetPasswordVerifiyEmai
 import Bike from './Pages/home/Bike_Secetion/Bike';
 import New from './Pages/home/Bike_Secetion/New';
 import AddNotification from './Pages/dashbord/Admin/PushNoti/AddNotification';
+import AdminBikeInformation from './Pages/dashbord/Admin/AdminBikeInformation';
+import NeyaretStoreInformation from './Pages/dashbord/Admin/NeyaretStoreInformation';
+import Prive from './Pages/home/Prive';
+import TemsOFuse from './Pages/home/TemsOFuse';
+import Faqs from './Pages/home/Faqs';
 
 
 function App() {
@@ -35,9 +40,13 @@ function App() {
         <Navbar/>
         <Routes>
             <Route path='/' element={<HomePage/>} />
+          
             <Route path='login' element={<LoginFrom/>} />
             <Route path='About' element={<About/>} /> 
             <Route path='forget-password' element={<ForgetPassword/>} />
+            <Route path='/privacy' element={<Prive/>} />
+            <Route path='/termsOfUse' element={<TemsOFuse/>} />
+            <Route path="/FaQs" element={<Faqs/>} />
             <Route path='signup' element={<Signup/>} />
             <Route path='verifiye-Email' element={<VerifyEmail/>} />
             <Route path='ResetPasswordverifiye-Email' element={<ResetPasswordVerifiyEmail/>} />
@@ -48,12 +57,14 @@ function App() {
             {
                 user?.accountType ==="Customer" ?  <Route path='/dashbord' element={<Sidebar/>} >
                 <Route path='setting' element={<Setting/>}/>
+                <Route path='StoreLocation/Info' element={<NeyaretStoreInformation/>} />
                 <Route path='myprofile' element={<Profile/>} />
                 <Route path='myBookingBike' element={<MyBookingBike/>} />
             </Route> : <Route path='/dashbord' element={<Sidebar/>} >
                   <Route path='myprofile' element={<Profile/>} />
                   <Route path='BookingBike' element={<AdminBooking/>} />
                   <Route path='Admin/cratestore' element={<CreateStore/>} />
+                  <Route path='Admin/Bike/Information' element={<AdminBikeInformation/>} />
                   <Route path='Notifications' element={<AddNotification/>} />
                   <Route path='Admin/cratestore/BikeInformation/:StoreId' element={<CreateBikeDetail/>} />
                   <Route path='Admin/cratestore/BikeInformation/Engine/:BikeId' element={<CrateEngineData/>} />

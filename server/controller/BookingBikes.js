@@ -48,7 +48,7 @@ exports.BookingNow = async(req,res) =>{
             {
                 $push:{
                     Bookings:Booking._id,
-                    expires:`1h`
+                    
                 }
             },{new:true}
         ).populate("Bookings").exec();

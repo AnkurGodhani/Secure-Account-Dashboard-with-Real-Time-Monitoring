@@ -16,9 +16,9 @@ const Profile = () => {
 
 <div className='flex items-center justify-center text-center mx-auto Porfile-shadow p-5 w-[520px] rounded-md'>
     <div className='flex justify-between items-center w-full gap-x-5 p-2'>
-       <div className='flex flex-col justify-center items-center text-blue-700 text-xl'>
+       <div className='flex gap-x-3 justify-center items-center text-blue-700 text-xl'>
           <h2>{user.firstName}</h2>
-          <p>{user.email}</p>
+          <p>{user.lastName}</p>
        </div>
        <div className='flex items-center text-center bg-green-700 text-white rounded-md py-2 px-8'>
           <button onClick={ 

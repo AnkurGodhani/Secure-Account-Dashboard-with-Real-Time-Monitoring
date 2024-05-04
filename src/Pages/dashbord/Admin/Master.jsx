@@ -27,7 +27,6 @@ const Master = () => {
     useEffect(()=>{
         setLoading(true)
         const FacingData = async () =>{
-            console.log("StoreId",StoreId)
             const result = await getStoreItemDetail({StoreId},token);
             if(result){
                 console.log("result",result)
@@ -74,7 +73,7 @@ const Master = () => {
                         <div className='flex justify-between w-full'>
                             <div className='flex flex-col'>
                                 <h1 className='flex items-center gap-x-2 text-xl font-bold mb-2'><RiLuggageDepositLine/>Security Deposit</h1>
-                                 <span className='flex items-center gap-x-1'><BiRupee/>200</span>
+                                 <span className='flex items-center gap-x-1'><BiRupee/>2000</span>
                                  <span className='flex text-green-500 font-bold'>(Refundable)</span>
                             </div>
                             <div className='flex flex-col'>
@@ -103,19 +102,19 @@ const Master = () => {
                     <details className='flex items-center justify-center text-center mx-auto p-4 cursor-pointer rounded-md'>
                             <summary>description About OverBike</summary>
                             <div className='flex justify-start text-white font-semibold mt-5 items-start text-start'>
-                                {items.description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate fugiat soluta quibusdam consequatur incidunt iusto quod, voluptatem adipisci sit nostrum quia pariatur corporis sint. Accusantium iure vitae asperiores blanditiis exercitationem?
+                                {items.description} 
                             </div>
                         </details>
                 </div>
                 {/* Deveri Time  */}
                 <div className='flex flex-col gap-y-5 w-full mt-5'>
                     <span className='flex items-center gap-x-5 font-bold text-red-400'> 
-                        <FaPeopleCarry size={24}/> SELLER DETAILS
+                        <FaPeopleCarry size={24}/> VENDOR DETAILS
                     </span>
                     <div className='flex gap-x-5 bg-blue-300 p-4 items-center justify-center rounded-lg w-full font-bold'>
                         <span className='border-r-2 pr-10'> <FaPeopleCarry size={30} color='green'/></span>
                         <div className='flex flex-col'>
-                            Pick up the product from the selected seller on or before
+                            Pick up the product from the selected vendor on or before
                             <span className='text-green-800'>Within 2 HOUERS</span>
                         </div>
                     </div>

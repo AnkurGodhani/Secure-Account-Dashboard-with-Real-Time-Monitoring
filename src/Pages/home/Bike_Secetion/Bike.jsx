@@ -22,7 +22,7 @@ const Bike = () => {
             <div>
                 {
                     news ? <New/> : <PopularBike/>
-                }
+                }   
             </div>
         </div>
     </div>

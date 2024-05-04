@@ -185,9 +185,9 @@ export function UpadateInfo(data,token){
             });
             console.log("Responce Aaviyo che....",Responce);
 
-            if(!Responce.data.sucess){
-                throw new Error(Responce.data.message)
-            }
+            // if(!Responce.data.success){
+            //     throw new Error(Responce.data.message)
+            // }
             toast.success("SucessFully Sent.")
        } catch (error) {
             console.log("UPADTE_APP NOTIFICATION API ERROR.....",error);

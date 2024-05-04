@@ -171,15 +171,7 @@ exports.sendotp = async (req,res) =>{
         // var result = await OTP.findOne({otp:otp})
         console.log("Result is Generate OTP funce")
         console.log("OTP",otp)
-        // console.log("Result",result)
-        
-        // while (result) {
-        //     otp = otpGenerator.generate(6, {
-        //       upperCaseAlphabets: false, 
-        //       lowerCaseAlphabets:false,
-        //       specialChars:false
-        //     })
-        //   }
+   
         
           const otpPayload = {email,otp}
           const otpBody = await OTP.create(otpPayload)
@@ -217,18 +209,8 @@ exports.resetPasswordsendOTP = async(req,res) =>{
             specialChars:false
         })
 
-        // var result = await OTP.findOne({otp:otp})
         console.log("Result is Generate OTP funce")
         console.log("OTP",otp)
-        // console.log("Result",result)
-        
-        // while (result) {
-        //     otp = otpGenerator.generate(6, {
-        //       upperCaseAlphabets: false, 
-        //       lowerCaseAlphabets:false,
-        //       specialChars:false
-        //     })
-        //   }
         
           const otpPayload = {email,otp}
           const otpBody = await OTP.create(otpPayload)
@@ -299,10 +281,8 @@ exports.changePassword = async (req,res)=>{
 exports.resetPassword = async (req,res) =>{
     try {
 
-        // User mathi Email Find karesu....
         const {emails,nowpassword,otp} = req.body
 
-        // validation
         if(!emails || !nowpassword || !otp){
             return res.status(400).json({
                 sucess:false,
@@ -337,7 +317,6 @@ exports.resetPassword = async (req,res) =>{
 
         const nowpasswordBycpt = await bcrypt.hash(nowpassword,10)
 
-        // upadate karusu...
         const updatepassworld = await User.findOneAndUpdate({email:emails},{
                     password:nowpasswordBycpt,
                     cpassword:nowpasswordBycpt,

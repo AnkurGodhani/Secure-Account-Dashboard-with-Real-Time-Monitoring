@@ -18,10 +18,10 @@ const New = () => {
                         <div className='flex flex-col justify-center items-center gap-y-3  p-2'>
                             <h1 className=' text-xl font-bold '>Hero Glamour 125</h1>
                             <p className=' text-lg font-normal text-gray-600 p-3.5'>Owners club. Nestled deep inside farm and forest land about an hour and a half away from Buenos Aires, it is a sensational place. As the name suggests, it's a sort of owner only thing with 'owned' bits are mostly classic cars. But the highlight of the place is a small but challenging track it houses. </p>
-                            <span className='font-bold '>Price : <span className='text-red-500'>1200/Day</span></span>
+                            <span className='font-bold '>Price : <span className='text-red-500'>500/Day</span></span>
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
-                            <Link to={`${token ? "" : "/login"}`}>
+                            <Link to={`${token ? "http://localhost:3000/dashbord/getstore/MasterDetail/65fe6339cbdc4cbcb4049d26" : "/login"}`}>
 
                             Rent Now
                             </Link>
@@ -35,10 +35,10 @@ const New = () => {
                         <div  className='flex flex-col justify-center items-center gap-y-3  p-2'>
                             <h1 className=' text-xl font-bold '>Hero Splendor Plus Xtec</h1>
                             <p className=' text-lg font-normal text-gray-600'>Owners club. Nestled deep inside farm and forest land about an hour and a half away from Buenos Aires, it is a sensational place. As the name suggests, it's a sort of owner only thing with 'owned' bits are mostly classic cars. But the highlight of the place is a small but challenging track it houses. We, however, haven't come here for the classic cars.</p>
-                            <span className='font-bold '>Price : <span className='text-red-500'>1200/Day</span></span>
+                            <span className='font-bold '>Price : <span className='text-red-500'>800/Day</span></span>
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
-                            <Link to={`${token ? "" : "/login"}`}>
+                            <Link to={`${token ? "http://localhost:3000/dashbord/getstore/MasterDetail/65fe64f4cbdc4cbcb4049d34" : "/login"}`}>
 
                             Rent Now
                             </Link>
@@ -55,7 +55,7 @@ const New = () => {
                             <span className='font-bold '>Price : <span className='text-red-500'>1000/Day</span></span>
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
-                            <Link to={`${token ? "" : "/login"}`}>
+                            <Link to={`${token ? "http://localhost:3000/dashbord/getstore/MasterDetail/65fe6595cbdc4cbcb4049d48" : "/login"}`}>
                             Rent Now
                             </Link>
                         </button>

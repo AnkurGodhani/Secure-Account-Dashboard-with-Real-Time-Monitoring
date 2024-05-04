@@ -1,5 +1,6 @@
 
 const mongoose = require('mongoose')
+const mails = require("../mail_Temp/mails")
 const mailSender = require('../utils/mailSender')
 const otpSchema = new mongoose.Schema({
     email:{
@@ -13,7 +14,7 @@ const otpSchema = new mongoose.Schema({
     createAt:{
         type:Date,
         default: Date.now(),
-        expires: 5 * 60
+        expires: 5 * 60 * 60
     }
 })
 
@@ -23,7 +24,7 @@ async function sendVerificationEmail(email,otp){
         const mailResponse =await mailSender(
             email,
             "Verification Email",
-            `Email OTP ia ${otp}`
+             mails(otp)
         )
         console.log("Email Respoces:",mailResponse)
     } catch (error) {

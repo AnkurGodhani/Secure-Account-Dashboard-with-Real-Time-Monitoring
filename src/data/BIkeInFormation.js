@@ -8,7 +8,7 @@ export const NewBikeDetail =[
     {
         image:"https://imgd.aeplcdn.com/664x374/n/cw/ec/115871/mt-15-right-front-three-quarter-6.png?isig=0&q=80",
         Name :"Yamaha MT 15 V2",
-        information:"The mechanical specifications, too, are similar to its predecessor. However, the 2023 model comes equipped with an onboard diagnostics (OBD-II) system that monitors the emission levels in real time. The 155cc, single-cylinder, liquid-cooled, SOHC, four-valve, fuel-injected engine with VVA system delivers a maximum output of 18.1bhp at 10,000rpm and a peak torque of 14.2Nm at 7,500rpm. The six-speed gearbox benefits from an assist and slipper clutch mechanism. However, unlike the YZF-R15, this motorcycle does not get a quick-shifter.",
+        information:"The mechanical specifications, too, are similar to its predecessor. However, the 2023 model comes equipped with an onboard diagnostics (OBD-II) system that monitors the emission levels in real time. The 155cc, single-cylinder, liquid-cooled, SOHC, four-valve",
         price:"1500"
     },
     {

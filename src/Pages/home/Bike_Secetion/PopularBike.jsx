@@ -18,10 +18,10 @@ const PopularBike = () => {
                         <div className='flex flex-col justify-center items-center gap-y-3  p-2'>
                             <h1 className=' text-xl font-bold '>KTM 200 Duke</h1>
                             <p className=' text-lg font-normal text-gray-600 p-3.5'>We have already told you everything you need to know about the all-new KTM 390 Duke, having tested it on the track and out on the road as well. And I came back extremely impressed with that motorcycle. Today, we have with us its smaller sibling, the 250 Duke...</p>
-                            <span className='font-bold '>Price : <span className='text-red-500'>1500/Day</span></span>
+                            <span className='font-bold '>Price : <span className='text-red-500'>2500/Day</span></span>
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
-                            <Link to={`${token ? "" : "/login"}`}>
+                            <Link to={`${token ? "http://localhost:3000/dashbord/getstore/MasterDetail/65fe66e0cbdc4cbcb4049d62" : "/login"}`}>
 
                             Rent Now
                             </Link>
@@ -35,10 +35,10 @@ const PopularBike = () => {
                         <div  className='flex flex-col justify-center items-center gap-y-3  p-2'>
                             <h1 className=' text-xl font-bold '>BMW G 310 GS</h1>
                             <p className=' text-lg font-normal text-gray-600'>The feature list continues to pack an LCD instrument cluster, full-LED lighting, adjustable levers, dual-channel ABS, and an assist and slipper clutch. The 2022 version also retains the BS6-compliant 313cc, liquid-cooled, single-cylinder engine that makes 33.5bhp and 28Nm of peak torque..</p>
-                            <span className='font-bold '>Price : <span className='text-red-500'>1500/Day</span></span>
+                            <span className='font-bold '>Price : <span className='text-red-500'>3500/Day</span></span>
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
-                            <Link to={`${token ? "" : "/login"}`}>
+                            <Link to={`${token ? "http://localhost:3000/dashbord/getstore/MasterDetail/65fe6781cbdc4cbcb4049d70" : "/login"}`}>
 
                             Rent Now
                             </Link>
@@ -52,10 +52,10 @@ const PopularBike = () => {
                         <div className='flex flex-col justify-center items-center gap-y-3  p-2'>
                             <h1 className=' text-xl font-bold '>Honda Shine 100</h1>
                             <p className=' text-lg font-normal text-gray-600'>Kawasaki Ninja 400 is a sports bike available in only 1 variant and 2 colours. The Kawasaki Ninja 400 is powered by 399cc BS6 engine which develops a power of 44.7 bhp and a torque of 37 Nm. With both front and rear disc brakes, Kawasaki Ninja 400 comes up with anti-locking braking system.</p>
-                            <span className='font-bold '>Price : <span className='text-red-500'>1000/Day</span></span>
+                            <span className='font-bold '>Price : <span className='text-red-500'>4000/Day</span></span>
                         </div>
                         <button type="button" className=' bg-orange-600 w-full rounded-md p-2 font-bold text-white hover:bg-orange-700 transition-all duration-200'>
-                            <Link to={`${token ? "" : "/login"}`}>
+                            <Link to={`${token ? "http://localhost:3000/dashbord/getstore/MasterDetail/65fe68a6cbdc4cbcb4049d84" : "/login"}`}>
                             Rent Now
                             </Link>
                         </button>

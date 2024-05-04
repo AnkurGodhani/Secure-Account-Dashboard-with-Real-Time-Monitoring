@@ -22,7 +22,7 @@ export const getAllStoreDetil = async(token) =>{
                 throw new Error(responce.data.message)
             }
             result = responce?.data?.storeDetil
-            toast.success("Get All detail perjenct.")
+          
 
         } catch (error) {
             console.log("ALL CAR STROGE DETAIL API ERROR....",error)
@@ -136,7 +136,7 @@ export function CrateEngineOfBike(data,token,navigate){
             }
 
             toast.success("Crating Store SucessFully.")
-            navigate("/")
+            navigate("/dashbord/Admin/cratestore")
         } catch (error) {
             console.log("CREATE BIKE ENGINE INFORMATION DETAIL API ERROR...",error)
             toast.error("Not Crating Store.")

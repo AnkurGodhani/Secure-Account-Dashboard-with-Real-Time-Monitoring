@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -22,10 +21,9 @@ const Footer = () => {
                 <h1 className='font-bold mb-5'>ABOUT US</h1>
                 <div className='flex flex-col gap-3'>
                     <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/>< Link to="/about">About Us</Link></span>
-                    <span className='flex items-center gap-x-1' ><MdOutlineDoubleArrow/>FAQs</span>
-                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/> <a href='#'>Privacy</a></span>
-                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/>Terms of use</span>
-                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/>Admin Login</span>
+                    <span className='flex items-center gap-x-1' ><MdOutlineDoubleArrow/><Link to="/FaQs">FAQs</Link></span>
+                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/> <Link to='/privacy'>Privacy</Link></span>
+                    <span className='flex items-center gap-x-1'><MdOutlineDoubleArrow/><Link to="/termsOfUse">Terms of use</Link></span>
                 </div>
             </div>
             <div className='flex flex-col items-center'>
@@ -44,11 +42,10 @@ const Footer = () => {
             <div className='flex items-center gap-x-3'> 
                 <span>Connect with Us: </span>
                 <div className='flex flex-row gap-x-2 items-end justify-center'>
-                        <div><a href="#"><FaFacebookF size={12} className='hover:text-blue-500'/></a></div>
-                        <div><a href="#"><RiTwitterXLine size={12} className='hover:text-black'/></a></div>
-                        <div><a href="#"><FaLinkedinIn size={12} className='hover:text-blue-800'/></a></div>
-                        <div><a href="#"><FaGooglePlusG size={12} className='hover:text-gray-500'/></a></div>
-                        <div><a href="#"><FaInstagram size={12} className='hover:text-red-500' /></a></div>
+                        <div><a href="https://www.facebook.com/ankur.godhani.330?mibextid=ZbWKwL"><FaFacebookF size={12} className='hover:text-blue-500'/></a></div>
+                        <div><a href="https://twitter.com/KodavalaNi55766?t=QQ0tT6XER8jbxHy9g1WKXA&s=08"><RiTwitterXLine size={12} className='hover:text-black'/></a></div>
+                        <div><a href="https://www.linkedin.com/in/ankur-godhani-743386267/"><FaLinkedinIn size={12} className='hover:text-blue-800'/></a></div>
+                        <div><a href="https://www.instagram.com/meets_ahir_21?igsh=MzRlODBiNWFlZA=="><FaInstagram size={12} className='hover:text-red-500' /></a></div>
                     </div>
             </div>
         </div>

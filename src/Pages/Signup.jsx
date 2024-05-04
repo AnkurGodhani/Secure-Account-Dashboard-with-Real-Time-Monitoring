@@ -54,7 +54,7 @@ const Signup = () => {
     })
   }
   return (
-    <div className=' flex justify-center items-center w-full -mt-1 bg-gari'>
+    <div className=' flex justify-center items-center w-full -mt-1 signup'>
           
         <form onSubmit={onSumbithadler} className=' flex lg:flex-col justify-center gap-y-3 mt-[10%] mb-[13.5%]'>
             <div className='flex gap-x-5 w-full'>
@@ -77,7 +77,7 @@ const Signup = () => {
                      <input type="password" name="password" placeholder='Enter Your Password' value={password} onChange={onChangehadler} required className='outline-none bg-red-200 text-yellow-900 p-2 rounded-md font-bold'/>
                  </label> 
                  <label className='flex flex-col gap-y-1'>
-                     <p className='flex items-center text-xl  font-medium text-gray-800 mx-2'>ConformPassword<sup className='text-red-500'>*</sup></p>
+                     <p className='flex items-center text-xl  font-medium text-gray-800 mx-2'>Confirm Password<sup className='text-red-500'>*</sup></p>
                      <input type="password" name="cpassword" placeholder='Enter Your Password' value={cpassword} onChange={onChangehadler} required className=' outline-none bg-red-200 text-yellow-900 p-2 rounded-md font-bold'/>
                  </label>
             </div>

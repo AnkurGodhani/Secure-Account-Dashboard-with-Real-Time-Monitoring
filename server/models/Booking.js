@@ -28,6 +28,7 @@ const BookingSchema = new mongoose.Schema({
     createAt:{
         type:Date,
         default: Date.now(),
+        expires:`2h`
     } 
 })  
 

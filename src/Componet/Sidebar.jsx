@@ -3,6 +3,7 @@ import { Outlet, matchPath, useLocation, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { ImProfile } from "react-icons/im";
 import { MdAppSettingsAlt } from "react-icons/md";
+import { RiEBike2Line } from "react-icons/ri";
 import { IoLogOutOutline } from "react-icons/io5";
 import { FaRegCreditCard } from "react-icons/fa";
 import { MdOutlineBrowserUpdated } from "react-icons/md";
@@ -43,9 +44,17 @@ const Sidebar = () => {
                     <strong className={`${matchRouter("/dashbord/myprofile") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-4 justify-center p-3 hover:bg-yellow-800`}> <ImProfile/><Link to="myprofile">Profile</Link></strong>
 
                     {
-                        user?.accountType === "Customer" ? ( <strong className={`${matchRouter("/dashbord/myBookingbike") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><FaRegCreditCard/><Link to="myBookingbike">Booking</Link></strong>
+                        user?.accountType === "Customer" ? ( 
+                         <div>
+                                <strong className={`${matchRouter("/dashbord/myBookingbike") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><FaRegCreditCard/><Link to="myBookingbike">Booking</Link></strong>
+
+                                <strong className={`${matchRouter("/dashbord/StoreLocation/Info") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><FaRegCreditCard/><Link to="StoreLocation/Info">Store Info</Link></strong>
+                         </div>
                         ) : ( 
                         <div>
+        
+                            <strong className={`${matchRouter("/dashbord/Admin/Bike/Information") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><RiEBike2Line/><Link to="Admin/Bike/Information">Bike</Link></strong>
+                            
                             <strong className={`${matchRouter("/dashbord/Bookingbike") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><FaRegCreditCard/><Link to="Bookingbike">Total Booking</Link></strong>
                             
                             <strong className={`${matchRouter("/dashbord/Admin/cratestore") &&'text-yellow-500 bg-yellow-800'} flex items-center gap-x-3 justify-center p-3 hover:bg-yellow-800`}><IoStorefrontSharp/><Link to="Admin/cratestore">Crate Store</Link></strong>

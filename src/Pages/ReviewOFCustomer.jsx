@@ -18,16 +18,16 @@ const ReviewOFCustomer = () => {
             <div className='w-[180px] h-[180px] flex flex-col rounded-full bg-green-700 text-white font-bold items-center justify-center'>
                 <span><RiMotorbikeFill size={35}/></span>
                  <CountUp start={0} end={100} prefix={""} suffix={"+"} delay={0.5} duration={5} className='text-3xl'/>  
-                 <span>New Bikes For Sale</span>
+                 <span>New Bikes For Rent</span>
             </div>
             <div className='w-[180px] h-[180px] flex flex-col rounded-full bg-green-700 text-white font-bold items-center justify-center'>
                 <span><FcSalesPerformance size={35}/></span>
                  <CountUp start={0} end={999} prefix={""} suffix={"+"} delay={0.3} duration={4} className='text-3xl'/>  
-                 <span>Used Bikes For Sale</span>
+                 <span>Used Bikes For Rent</span>
             </div>
             <div className='w-[180px] h-[180px] flex flex-col rounded-full bg-green-700 text-white font-bold items-center justify-center'>
                 <span><PiUserFocusFill size={35}/></span>
-                 <CountUp start={0} end={850} prefix={""} suffix={"+"} delay={0.2} duration={3} className='text-3xl'/>  
+                 <CountUp start={0} end={999} prefix={""} suffix={"+"} delay={0.2} duration={3} className='text-3xl'/>  
                  <span>Satisfied Customers</span>
             </div>
         </div>

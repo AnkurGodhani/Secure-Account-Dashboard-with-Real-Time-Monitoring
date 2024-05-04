@@ -16,13 +16,11 @@
     min-height:100vh;
     object-fit: cover;
     overflow: hidden;
-    /* filter: blur(0.8px); */
 }   
 
 .bg-image1{
   background: url("./image/bg.jpg");
   background-size: cover;
-  /* opacity:0.5; */
   min-height:94.5vh;
   object-fit: cover;
   overflow: hidden;
@@ -39,7 +37,7 @@
 
 .bike{
   background:url("./image/bg2");
-   height: 91.8vh;
+   height: 92.5vh;
    background-size: cover;
    object-fit: cover;
    width: 100%;
@@ -58,7 +56,6 @@
   object-fit: cover;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
     width: 60px;
     height: 50px;
@@ -101,7 +98,6 @@
   object-fit: cover;
 }
 
-/* shdow propertices in grid method  */
 .shadows{
   -webkit-box-shadow: 14px 0px 35px -5px rgba(179,189,194,0.62);
   -moz-box-shadow: 14px 0px 35px -5px rgba(179,189,194,0.62);
@@ -121,7 +117,6 @@
 }
 
 
- /* Reset-Passworld ne css che  */
 .button-56 {
   align-items: center;
   background-color: #431cc5;
@@ -216,8 +211,10 @@
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
-.bg-gari{
+.signup{
     background-color: #eb7d4e;
+   height: 92.5vh;
+
 }
 
 .button1 {

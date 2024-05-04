@@ -3,7 +3,6 @@ import { RxCross2 } from "react-icons/rx";
 import { useDispatch } from "react-redux";
 import { Booking } from "../services/opreation/BookingsAPI";
 import { useNavigate } from "react-router-dom";
-import { BsAlphabet } from "react-icons/bs";
 
 const BookingModels = ({btn,BikeId,masterToken}) => {
   const {
@@ -40,19 +39,19 @@ const BookingModels = ({btn,BikeId,masterToken}) => {
             </label>
             <label className="flex flex-col w-full p-2">
                 <p  className="text-md font-semibold mx-1.5">PhoneNo <span className="text-red-500">*</span></p>
-                <input type="Number" placeholder="Enter Your PhoneNumber" {...register("PhoneNo",{required:true,maxLength:10,minLength:10})} className="w-full p-1.5 border border-black outline-none mt-1 rounded-sm" />
+                <input type="text" placeholder="Enter Your PhoneNumber" {...register("PhoneNo",{required:true,maxLength:10,minLength:10})} className="w-full p-1.5 border border-black outline-none mt-1 rounded-sm" />
                 {
                    errors.PhoneNo && (<span>Number is Invild.</span>)
                 }
             </label>
             <div className="flex  gap-y-1 w-full gap-x-2">
                 <label className="flex flex-col w-full p-2">
-                    <p className="text-md font-semibold mx-1.5">Liesunce<span className="text-red-500">*</span></p>
-                    <input type="text" placeholder="Enter Your Laience Number" {...register("Liesunce",{required:true})} className="w-full p-1.5 border border-black outline-none mt-1 rounded-sm"/>
+                    <p className="text-md font-semibold mx-1.5">License<span className="text-red-500">*</span></p>
+                    <input type="text" placeholder="Enter Your License Number" {...register("Liesunce",{required:true})} className="w-full p-1.5 border border-black outline-none mt-1 rounded-sm"/>
                     {
                        errors.Liesunce && (
                           <span>
-                            Lieneces Number is Invild
+                            License Number is Invild
                           </span>
                        )
                     }

@@ -30,7 +30,7 @@ exports.Quarey = async(req,res) =>{
 
     return res.status(200).json({
         sucess:true,
-        messages:"Your Message Queri SucessFully Sending Email About Instaters.",
+        messages:"Your Message Queri SucessFully Sending Email.",
         CreateConact
     })
   
