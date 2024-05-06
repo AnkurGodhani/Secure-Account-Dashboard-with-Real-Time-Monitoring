@@ -11,8 +11,8 @@ MOONGOOSE_URL ="mongodb+srv://ankurgodhani07:ankut@ankit.1kjj9as.mongodb.net/try
 JWT_SECRET="10"
 
 MAIL_HOST=smtp.gmail.com
-MAIL_USER=ankurgodhani07@gmail.com
-MAIL_PASS=ooyyzbzbrnfgfytj
+MAIL_USER="your emailid"
+MAIL_PASS="your emailid passkey"
 
 CLOUD_NAME= 
 CLOUD_API_KEY=
